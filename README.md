@@ -5,7 +5,7 @@ A RESTful API service built using Spring Boot provides endpoints for mapping use
 * Authentication and Authorization : Implemented using Bearer token with three roles: CUSTOMER, MANAGER and ADMIN.
 * User management:
   + User registration with email, password (encrypted using BCrypt), first name, last name, and role.
-  + User login using email and password.
+  + User login using email and password and a bearer token will get generated.
 * Hotel management:
   + Store and manage Hotel details such as name,location,description and available rooms.
   + Create, update and delete hotels.
