@@ -2,7 +2,7 @@
 A RESTful API service built using Spring Boot provides endpoints for mapping users,hottels and bookings while using MySQL to persist the data.
 
 # Features
-* Authentication and Authorization : Implemented using Basic Auth with two roles: CUSTOMER, MANAGER and ADMIN.
+* Authentication and Authorization : Implemented using Bearer token with three roles: CUSTOMER, MANAGER and ADMIN.
 * User management:
   + User registration with email, password (encrypted using BCrypt), first name, last name, and role.
   + User login using email and password.
