@@ -1,19 +1,18 @@
 # Stage 1: Build the application using Gradle
-FROM gradle:8.0.0-jdk17 AS build
+FROM gradle:7.2.0-jdk17 AS build
 WORKDIR /app
 
 # Copy Gradle project files
-COPY build.gradle settings.gradle ./
-COPY gradle ./gradle
-COPY src ./src
+COPY . .
 
-RUN gradle dependencies --no-daemon
+
 
 # Build the project
-RUN gradle build --no-daemon
+RUN ./gradlew clean build -x test
+
 
 # Stage 2: Create a minimal image for running the Spring Boot application
-FROM eclipse-temurin:17-jre-alpine
+FROM openjdk:17.0.1-jdk-slim
 
 # Set working directory
 WORKDIR /app
