@@ -7,6 +7,8 @@ COPY build.gradle settings.gradle ./
 COPY gradle ./gradle
 COPY src ./src
 
+RUN gradle dependencies --no-daemon
+
 # Build the project
 RUN gradle build --no-daemon
 
