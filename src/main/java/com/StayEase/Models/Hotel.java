@@ -23,6 +23,6 @@ public class Hotel {
     private String location;
     @NotBlank
     private String description;
-    @NotBlank
+
     private int availableRooms;
 }

@@ -16,7 +16,8 @@ COPY src/ src/
 RUN gradle build --no-daemon
 
 # Use the Java 17 image for the runtime environment
-FROM adoptopenjdk/openjdk17:alpine-jre
+FROM eclipse-temurin:17-jre-alpine
+
 
 # Set environment variables
 ARG MYSQL_DBNAME
