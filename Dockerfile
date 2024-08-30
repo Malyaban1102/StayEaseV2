@@ -5,7 +5,7 @@ WORKDIR /app
 # Copy Gradle project files
 COPY . .
 
-
+RUN chmod +x ./gradlew
 
 # Build the project
 RUN ./gradlew clean build -x test
