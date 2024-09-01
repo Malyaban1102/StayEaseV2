@@ -3,6 +3,7 @@ package com.StayEase.Controllers;
 
 import com.StayEase.Models.Hotel;
 import com.StayEase.Services.Implementation.HotelServiceImpl;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/hotels")
+@SecurityRequirement(name="BasicAuth")
 public class HotelController {
 
     private final HotelServiceImpl hotelService;

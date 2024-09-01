@@ -1,6 +1,7 @@
 package com.StayEase.Controllers;
 import com.StayEase.Models.Booking;
 import com.StayEase.Services.Implementation.BookingServiceImpl;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/bookings")
+@SecurityRequirement(name="BasicAuth")
 public class BookingController {
 
     private final BookingServiceImpl bookingService;
